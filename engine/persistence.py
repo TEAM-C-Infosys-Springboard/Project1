@@ -3,6 +3,13 @@ import os
 
 
 class PersistenceManager:
+    """
+    PersistenceManager handles saving and loading key-value data
+    to and from disk using a JSON file.
+ 
+    This ensures that in-memory data is persisted across
+    application restarts and enables crash-safe recovery.
+    """
     def __init__(self, file_path="data/store.json"):
         self.file_path = file_path
 
